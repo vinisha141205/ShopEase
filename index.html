@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase | Modern eCommerce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">ShopEase</div>
+      <nav id="navMenu">
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#contact">Contact</a>
+        <a href="#">About</a>
+      </nav>
+      <div class="actions">
+        <div class="search-container">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products..." aria-label="Search products">
+        </div>
+        <span id="cartCount" class="cart-badge">0</span>
+        <button class="wishlist-toggle" id="wishlistToggle" aria-label="View wishlist">❤️</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Discover, Shop &amp; Enjoy</h1>
+      <p>Explore top brands and trending styles curated just for you. ShopEase makes online shopping seamless and fun.</p>
+      <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+    </div>
+    <div class="hero-img">
+      <img src="3d rendering of minimal search bar and pink cursor_  _ Premium Photo.jpeg" alt="Shopping hero image" loading="lazy">
+    </div>
+  </section>
+
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="fashion">Fashion</button>
+    <button data-filter="electronics">Electronics</button>
+    <button data-filter="accessories">Accessories</button>
+    <div class="sort-container">
+      <label for="sortSelect" class="sr-only">Sort products</label>
+      <select id="sortSelect" aria-label="Sort products">
+        <option value="name-asc">Name (A-Z)</option>
+        <option value="name-desc">Name (Z-A)</option>
+        <option value="price-asc">Price (Low to High)</option>
+        <option value="price-desc">Price (High to Low)</option>
+      </select>
+    </div>
+  </div>
+
+  <section class="products" id="products">
+    <h2>Popular Picks</h2>
+    <div class="product-grid" id="productGrid">
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/08/adult-1868750_960_720.jpg" alt="Summer Dress" loading="lazy">
+        <h3>Summer Dress</h3>
+        <p class="price">$45.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Summer Dress">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="1">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2014/04/05/11/40/smartphone-316472_960_720.jpg" alt="Smartphone X" loading="lazy">
+        <h3>Smartphone X</h3>
+        <p class="price">$699.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Smartphone X">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="2">❤️</a>
+      </div>
+      <div class="product" data-category="accessories">
+        <img src="https://cdn.pixabay.com/photo/2017/08/06/14/45/watches-2594368_960_720.jpg" alt="Classic Watch" loading="lazy">
+        <h3>Classic Watch</h3>
+        <p class="price">$89.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Classic Watch">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="3">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2015/09/05/22/46/laptop-925808_960_720.jpg" alt="Laptop Pro" loading="lazy">
+        <h3>Laptop Pro</h3>
+        <p class="price">$1099.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Laptop Pro">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="4">❤️</a>
+      </div>
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/21/16/shoes-1284341_960_720.jpg" alt="Stylish Sneakers" loading="lazy">
+        <h3>Stylish Sneakers</h3>
+        <p class="price">$59.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Stylish Sneakers">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="5">❤️</a>
+      </div>
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/fashion-1869247_960_720.jpg" alt="Winter Jacket" loading="lazy">
+        <h3>Winter Jacket</h3>
+        <p class="price">$79.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Winter Jacket">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="6">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/07/12/headphones-1284042_960_720.jpg" alt="Wireless Headphones" loading="lazy">
+        <h3>Wireless Headphones</h3>
+        <p class="price">$129.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Wireless Headphones">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="7">❤️</a>
+      </div>
+      <div class="product" data-category="accessories">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/03/36/bag-1866503_960_720.jpg" alt="Leather Bag" loading="lazy">
+        <h3>Leather Bag</h3>
+        <p class="price">$49.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Leather Bag">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="8">❤️</a>
+      </div>
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/23/14/45/jeans-1853301_960_720.jpg" alt="Denim Jeans" loading="lazy">
+        <h3>Denim Jeans</h3>
+        <p class="price">$39.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Denim Jeans">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="9">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2017/08/01/01/33/smart-watch-2561573_960_720.jpg" alt="Smart Watch" loading="lazy">
+        <h3>Smart Watch</h3>
+        <p class="price">$199.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Smart Watch">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="10">❤️</a>
+      </div>
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/13/14/shirt-1869701_960_720.jpg" alt="Casual Shirt" loading="lazy">
+        <h3>Casual Shirt</h3>
+        <p class="price">$29.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Casual Shirt">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="11">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/06/46/speaker-1868498_960_720.jpg" alt="Bluetooth Speaker" loading="lazy">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">$59.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Bluetooth Speaker">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="12">❤️</a>
+      </div>
+      <div class="product" data-category="accessories">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/45/sunglasses-1868761_960_720.jpg" alt="Sunglasses" loading="lazy">
+        <h3>Sunglasses</h3>
+        <p class="price">$19.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Sunglasses">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="13">❤️</a>
+      </div>
+      <div class="product" data-category="fashion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/13/58/hoodie-1870086_960_720.jpg" alt="Hoodie" loading="lazy">
+        <h3>Hoodie</h3>
+        <p class="price">$49.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Hoodie">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="14">❤️</a>
+      </div>
+      <div class="product" data-category="electronics">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/07/32/tablet-1284451_960_720.jpg" alt="Tablet" loading="lazy">
+        <h3>Tablet</h3>
+        <p class="price">$299.99</p>
+        <a href="#" class="btn-buy">Add to Cart</a>
+        <a href="#" class="btn-contact" data-product="Tablet">Contact Seller</a>
+        <a href="#" class="btn-wishlist" data-product-id="15">❤️</a>
+      </div>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </section>
+
+  <div class="modal" id="contactModal" role="dialog" aria-labelledby="contactModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="contactModalClose" aria-label="Close contact modal">✕</button>
+      <h3 id="contactModalTitle">Contact Seller</h3>
+      <form id="productContactForm">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" aria-label="Phone Number">
+        <input type="text" name="product" id="contactProduct" placeholder="Product" aria-label="Product Name" readonly>
+        <textarea name="message" placeholder="Your Message" rows="5" aria-label="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="form-message" id="productContactMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="wishlistModal" role="dialog" aria-labelledby="wishlistModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="wishlistModalClose" aria-label="Close wishlist modal">✕</button>
+      <h3 id="wishlistModalTitle">Your Wishlist</h3>
+      <div id="wishlistItems"></div>
+    </div>
+  </div>
+
+  
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <footer>
+    <p>© 2025 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
